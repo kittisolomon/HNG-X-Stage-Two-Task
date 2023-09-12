@@ -1,6 +1,4 @@
-<p align="center"><a href="" target="_blank"><img src="" width="400" alt="Laravel Logo"></a></p>
-
-
+<p align="center"><a href="" target="_blank"><img src="https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/4aaeda92-014e-4fd9-b3d1-7fad49230654" width="400" alt="Laravel Logo"></a></p>
 
 ## HNG X Stage Two Task
 
@@ -80,8 +78,8 @@ http://127.0.0.1:8000/api/api
 ```
 
 -  After creating a workspace and collection on Postman, create a new POST request and paste the enpoint above, pass your resource via the body of the request using the form-data panel, hit send and the resource would be persisted to the DB, and a responses would be received as seen:
+![create](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/b126239d-0895-4d33-af9f-0cd270b63767)
 
-attach image
 
 > Read Resource
 
@@ -91,7 +89,8 @@ http://127.0.0.1:8000/api/api/id
 
 - To read  stored Person resources, you  will need to use the above endpoint but this time, we are passing a route arameter to the endpoint, which is the id that serves as an identifier of individual Person resources in the DB, create GET request on Postman and use the endpoint to retrieve a single Person resource.
 
-attach image
+![get](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/beda835c-4ef6-4217-adcf-713223dbb459)
+
 
 > Update Resource
 
@@ -101,7 +100,8 @@ http://127.0.0.1:8000/api/api/id
 
 - To update resource you pass the id to the endpoint, define your request as PUT, pass the resource that would relace the existing DB resource through the body of the request, as seen below:
 
-attach image
+![update](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/fee5e587-e556-49b6-b531-13faa1ccb4ee)
+
 
 > Delete Resource
 
@@ -111,7 +111,8 @@ http://127.0.0.1:8000/api/api/id
 
 - To Delete a resource, create a new request with a DELETE method, pass the id you want to delete in the endpoint paramenter and hit send, that particular resource would be deleted.
 
-attach image
+![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/0d094dc3-07e7-4568-ba87-4f208af8bd1a)
+
 
 > Accessing Non-Existant Resource
 
@@ -119,5 +120,6 @@ attach image
 http://127.0.0.1:8000/api/api/id
 ```
  - I thought about handling edge cases like when  trying to perform a PUT,DELETE,GET on resource that do not exist, and i define a way to through an error noting that that resource does not exist.
+![does_not_exist](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/74d86ea3-7a4d-470f-a158-0fba7bb9f883)
 
 
