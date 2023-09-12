@@ -16,9 +16,8 @@ class PersonsResource extends JsonResource
     {
         return [
             'id' => (string)$this->id,
-            'attribute' => [
-                'name' => $this->name
-            ]
+            'name' => $this->name,
+            'status_code' => $this->code
         ];
     }
 }

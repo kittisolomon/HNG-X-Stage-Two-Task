@@ -35,9 +35,11 @@ class PersonsController extends Controller
 
         ]);
 
-        $isTrue =  $this->success('', 'Resource inserted successfully', 200);
+        
 
-        $notTrue = $this->error('', 'Error resource not  created', 505);
+        $isTrue =  new PersonsResource($person);
+
+        $notTrue = $this->error('', 'Error resource not  created', 501);
 
         return $person ? $isTrue :  $notTrue;
 
@@ -66,12 +68,13 @@ class PersonsController extends Controller
     {
         $notExistId = $this->notExistId($id);
 
-        Person::where('id', $id)
-        ->update([
+        $updatePerson = Person::find($id);
+
+        $updatePerson->update([
             'name' => $request->name
         ]);
     
-       return $notExistId ? $notExistId : $this->success('','Resource Updated Succesfully', 200);
+       return $notExistId ? $notExistId : new PersonsResource($updatePerson);
       
     }
     /**
