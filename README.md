@@ -1,4 +1,4 @@
-![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/33566c9a-1f9d-4ea7-a043-423f5b32352e)<p align="center"><a href="" target="_blank"><img src="https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/4aaeda92-014e-4fd9-b3d1-7fad49230654" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/4aaeda92-014e-4fd9-b3d1-7fad49230654" width="400" alt="Laravel Logo"></a></p>
 
 ## HNG X Stage Two Task
 
