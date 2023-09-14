@@ -112,7 +112,7 @@ http://127.0.0.1:8000/api/
 > Read a single person detail
 
 ```vbnet
-http://127.0.0.1:8000/api/id
+http://127.0.0.1:8000/api/14
 ```
 
 ![get](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/5cd2673f-f669-45f2-9edd-f9c851bf2dfd)
@@ -124,7 +124,7 @@ http://127.0.0.1:8000/api/id
 > Update a person detail
 
 ```vbnet
-http://127.0.0.1:8000/api/id
+http://127.0.0.1:8000/api/14
 ```
 ![update](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/8570250f-78a6-44a7-9aa7-5cd3a54525e9)
 
@@ -134,7 +134,7 @@ http://127.0.0.1:8000/api/id
 > Delete a person 
 
 ```vbnet
-http://127.0.0.1:8000/api/id
+http://127.0.0.1:8000/api/14
 ```
 
 ![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/eea7cd8a-d025-41be-afdf-3eb2e73a6cad)
