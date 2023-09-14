@@ -1,8 +1,8 @@
-<p align="center"><a href="" target="_blank"><img src="https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/4aaeda92-014e-4fd9-b3d1-7fad49230654" width="400" alt="Laravel Logo"></a></p>
 
-## HNG X Stage Two Task
 
-The project is a REST API built with  [Laravel] (https://laravel.com/docs) and the API is capable of performing CRUD operation,
+## CRUD API
+
+The project is a CRUD API built with  Laravel and the API is capable of performing CRUD operation,
 of a "Person" resource, the project interfaces with MYSQL Database for storage, retrieval and manipulation of resources. The API can create,read,update and delete a Person resource. The API follows the RESTful API principles which include using HTTP methods (POST, GET, PUT, DELETE) to interact with resources.
 
 
@@ -67,63 +67,76 @@ by default your app should be running on 'http://localhost:8000'
 
 Hurray!!! :rocket: you have set the project up and running! :smile:
 
+## CRUD Operation
+
+### Read (GET/api)
+- The index method fetches all the information about people stored in the database and sends it back in a JSON format.
+### Create (POST/api)
+- The create method is employed to insert a new person into the database. Using the following steps:
+
+1. It checks the input data to make sure that a name is provided, that it's a valid string, and that it doesn't exceed a certain length.
+
+2. It looks up the database to see if another person with the same name already exists.
+
+3. If no matching name is found, it creates a brand new record for that person in the database, and return the created person details in JSON.
+
+### Read Single (GET /api/{People:id})
+- The create method is used to insert a new person into the database. Here's how it works:
+1. It makes sure that the input data is correct, including checking if a name is provided, if it's a valid string, and if it doesn't exceed a certain length.
+2. It checks if there is already a person with the same name in the database.
+3. If no person with the same name is found, it creates a new record for that person in the database.
+4. 
+### Update (PATCH /api/{people:id})
+- The update method is used to change the name of a person who already exists in the database, based on the passed id:
+
+1. It first checks if the input data is a  string, and doesn't exceed a certain length.
+2. Then, it checks if the new name you want to use is not already taken by someone else.
+3. If the person is in the database, it updates their name with the new one, and return the updated record fr.
+
+### Delete (DELETE /api/{people:id})
+- The destroy method removes a person's record from the database using their ID. If the person is in the database, it gets deleted.
+
 ## Sample Usage
 
-- By now your Project should be running on 'http://localhost:8000' Lets take a dive through Postman to test our API.
-Our project can be access with the endpoint:
-
-> Create Resource
+> Create a new person 
 ```vbnet
-http://127.0.0.1:8000/api/api
+http://127.0.0.1:8000/api/
 ```
 
--  After creating a workspace and collection on Postman, create a new POST request and paste the enpoint above, pass your resource via the body of the request using the form-data panel, hit send and the resource would be persisted to the DB, and a resource response would be received as seen:
 ![create](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/93e99b0a-0a31-4c99-91f4-590a4d37d74f)
 
 
 
-> Read Resource
+> Read a single person detail
 
 ```vbnet
-http://127.0.0.1:8000/api/api/id
+http://127.0.0.1:8000/api/id
 ```
-
-- To read  stored Person resource, you  will need to use the above endpoint but this time, we are passing a route parameter to the endpoint, which is the id that serves as an identifier of individual Person resources in the DB, create GET request on Postman and use the endpoint to retrieve a single Person resource.
 
 ![get](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/a51d8639-4148-47b6-9347-2181bbdfadfb)
 
 
 
-> Update Resource
+> Update a person detail
 
 ```vbnet
-http://127.0.0.1:8000/api/api/id
+http://127.0.0.1:8000/api/id
 ```
-
-- To update resource you pass the id to the endpoint, define your request as PUT, pass the resource that would relace the existing DB resource through the body of the request, as seen below:
 
 ![update](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/228ca964-4cf5-4cd6-b2c2-4b59afe79d46)
 
 
-
-> Delete Resource
+> Delete a person 
 
 ```vbnet
-http://127.0.0.1:8000/api/api/id
+http://127.0.0.1:8000/api/id
 ```
 
-- To Delete a resource, create a new request with a DELETE method, pass the id you want to delete in the endpoint paramenter and hit send, that particular resource would be deleted.
 
 ![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/6c969a5c-c8c5-4259-9d26-a946cbff4260)
 
 
 
-> Accessing Non-Existant Resource
 
-```vbnet
-http://127.0.0.1:8000/api/api/id
-```
- - I thought about handling edge cases like when  trying to perform a PUT,DELETE, and GET on resource that do not exist, and i defined a way through an error response, noting  that resource does not exist.
-![does_not_exist](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/74d86ea3-7a4d-470f-a158-0fba7bb9f883)
 
 
