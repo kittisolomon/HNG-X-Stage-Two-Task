@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePersonRequest;
+use App\Http\Requests\UpdatePersonRequest;
 use App\Http\Resources\PersonsResource;
 use App\Models\Person;
 use App\Traits\HttpResponses;
@@ -11,15 +12,14 @@ use PHPUnit\Framework\MockObject\Stub\ReturnSelf;
 
 class PersonsController extends Controller
 {
-    use HttpResponses;
+    
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return PersonsResource::collection(
-            Person::get()
-        );
+        return  Person::all();
+        
     }
 
     /**
@@ -29,34 +29,21 @@ class PersonsController extends Controller
     {
         $request->validated($request->all());
 
-        $person = Person::create([
+        $person = new Person($request->validated());
 
-            'name' => $request->name
+        $person->save();
 
-        ]);
-
-        
-
-        $isTrue =  new PersonsResource($person);
-
-        $notTrue = $this->error('', 'Error resource not  created', 501);
-
-        return $person ? $isTrue :  $notTrue;
-
+        return response()->json($person, 201);
        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(Person $person)
     {
     
-      $notExistId = $this->notExistId($id);
-
-      $details = Person::find($id);
-
-      return $notExistId ? $notExistId : new PersonsResource($details);
+        return $person;
       
     }
 
@@ -64,40 +51,26 @@ class PersonsController extends Controller
      * Show the form for editing the specified resource.
      */
    
-    public function update(Request $request, $id)
+    public function update(UpdatePersonRequest $request, Person $person)
     {
-        $notExistId = $this->notExistId($id);
+       
+        $validated = $request->validated();
 
-        $updatePerson = Person::find($id);
+        $person->update($validated);
 
-        $updatePerson->update([
-            'name' => $request->name
-        ]);
-    
-       return $notExistId ? $notExistId : new PersonsResource($updatePerson);
+        return response()->json($person);
       
     }
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(Person $person)
     {
-        $notExistId = $this->notExistId($id);
+        $person->delete();
 
-        Person::where('id', $id)
-        ->delete();
-    
-       return $notExistId ? $notExistId : $this->success('','Resource Deleted Succesfully', 200);
+        return response()->json('Deleted', 204);
         
     }
 
-    private function notExistId($id)
-    {
-       if(!Person::where('id', $id)->exists()){
-
-        return $this->error('', 'Person with id:'. $id. ' does not exist', 404);
-
-       }
-        
-    }
+  
 }
