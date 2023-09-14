@@ -103,7 +103,8 @@ Hurray!!! :rocket: you have set the project up and running! :smile:
 http://127.0.0.1:8000/api/
 ```
 
-![create](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/307e4d38-104f-433a-b2b0-2c7677dcd6f7)
+![create](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/f3a749d9-62f3-42e7-9841-61c32bba31f2)
+
 
 
 
@@ -114,7 +115,8 @@ http://127.0.0.1:8000/api/
 http://127.0.0.1:8000/api/id
 ```
 
-![get](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/51165222-7adb-4541-ba92-bbb0bd8773b8)
+![get](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/5cd2673f-f669-45f2-9edd-f9c851bf2dfd)
+
 
 
 
@@ -124,8 +126,8 @@ http://127.0.0.1:8000/api/id
 ```vbnet
 http://127.0.0.1:8000/api/id
 ```
+![update](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/8570250f-78a6-44a7-9aa7-5cd3a54525e9)
 
-![update](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/850b47c4-69aa-4e34-b18c-102648ae4615)
 
 
 
@@ -135,8 +137,8 @@ http://127.0.0.1:8000/api/id
 http://127.0.0.1:8000/api/id
 ```
 
+![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/eea7cd8a-d025-41be-afdf-3eb2e73a6cad)
 
-![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/9e76da8a-417c-496b-8dc7-acd283611f5b)
 
 
 
