@@ -18,9 +18,21 @@ class PersonsController extends Controller
      */
     public function index()
     {
-        return  Person::all();
-        
+        $person = Person::all(); 
+    
+        if ($person->count() > 0) {
+
+            return response()->json($person, 200);
+
+        } else {
+
+            return response()->json([
+                'message' => 'No Person Found'
+            ], 404);
+        }
     }
+        
+    
 
     /**
      * Store a newly created resource in storage.
@@ -31,22 +43,35 @@ class PersonsController extends Controller
 
         $person = new Person($request->validated());
 
-        $person->save();
 
-        return response()->json($person, 201);
+        if($person->save()){
+
+            return response()->json(['message' => 'Person Created', 'Person' => $person], 201);
+
+        }else{
+            return response()->json(['message' => 'Internal Error Occured'], 500);
+        }
+
+      
        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Person $person)
+    public function show ($id)
     {
-    
-        return $person;
-      
-    }
 
+     $person = Person::find($id);
+
+    if($person){
+
+        return response()->json($person, 200);
+      
+    }else{
+        return response()->json(['message' => 'Person does not exist'], 404);
+    }
+}
     /**
      * Show the form for editing the specified resource.
      */
@@ -58,17 +83,24 @@ class PersonsController extends Controller
 
         $person->update($validated);
 
-        return response()->json($person);
+        return response()->json(['message' => 'Person Updated', 'New Person Details' => $person], 200);
       
     }
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Person $person)
+    public function destroy($id)
     {
+        $person = Person::find($id);
+
+        if($person){
+
         $person->delete();
 
-        return response()->json('Deleted', 204);
+        return response()->json(['message' => 'Person Deleted'], 200);
+
+        }
+        return response()->json(['message' => "Person does not exist"], 400);
         
     }
 
