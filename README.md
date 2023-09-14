@@ -103,7 +103,8 @@ Hurray!!! :rocket: you have set the project up and running! :smile:
 http://127.0.0.1:8000/api/
 ```
 
-![create](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/93e99b0a-0a31-4c99-91f4-590a4d37d74f)
+![create](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/307e4d38-104f-433a-b2b0-2c7677dcd6f7)
+
 
 
 
@@ -113,7 +114,8 @@ http://127.0.0.1:8000/api/
 http://127.0.0.1:8000/api/id
 ```
 
-![get](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/a51d8639-4148-47b6-9347-2181bbdfadfb)
+![get](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/51165222-7adb-4541-ba92-bbb0bd8773b8)
+
 
 
 
@@ -123,7 +125,8 @@ http://127.0.0.1:8000/api/id
 http://127.0.0.1:8000/api/id
 ```
 
-![update](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/228ca964-4cf5-4cd6-b2c2-4b59afe79d46)
+![update](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/850b47c4-69aa-4e34-b18c-102648ae4615)
+
 
 
 > Delete a person 
@@ -133,7 +136,8 @@ http://127.0.0.1:8000/api/id
 ```
 
 
-![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/6c969a5c-c8c5-4259-9d26-a946cbff4260)
+![delete](https://github.com/kittisolomon/HNG-X-Stage-Two-Task/assets/40053238/9e76da8a-417c-496b-8dc7-acd283611f5b)
+
 
 
 
