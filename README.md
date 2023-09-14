@@ -109,7 +109,7 @@ http://127.0.0.1:8000/api/
 
 
 
-> Read a single person detail
+> Read a single Person  details
 
 ```vbnet
 http://127.0.0.1:8000/api/14
@@ -121,7 +121,7 @@ http://127.0.0.1:8000/api/14
 
 
 
-> Update a person detail
+> Update a Person details
 
 ```vbnet
 http://127.0.0.1:8000/api/14
